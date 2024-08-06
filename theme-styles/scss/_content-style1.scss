@@ -1,0 +1,107 @@
+body.archive,
+body.blog,
+body.search {
+    #primary article {
+        margin-top: 2.5rem;
+        padding-bottom: 2rem;
+        &.has-thumbnail .blog-row {
+            @media only screen and (min-width: 48rem) {
+                display: flex;
+                column-gap: 2.5rem;
+                .post-content {
+                    width: 65%;
+                }
+                .thumbnail-wrapper-outer {
+                    width: 35%;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: solid 1px #eeeeee;
+        }
+
+        .entry-title {
+            margin: 0 0 5px;
+            line-clamp: 2;
+
+            @media only screen and (max-width: 30rem){
+                line-height: 120%;
+            }
+            a {
+                text-decoration: none;
+                font-weight: 400;
+                color: black;
+                text-decoration: none;
+                text-decoration-thickness: 3px;
+                font-size: 1.55rem;
+                line-clamp: 2;
+                @media only screen and (max-width:480px){
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        .read-more{
+            @extend .button;
+
+            span {
+                position: relative;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: var(--primary-color);
+            }
+
+            &:hover {
+
+                &:before {
+                    filter: brightness(90%);
+                }
+            }
+        }
+        
+        .entry-meta {
+            margin: 0;
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .entry-footer {
+
+            a {
+                text-decoration: none;
+            }
+        }
+        .entry-content,
+        .entry-summary {
+            color: #aaaaaa;
+            margin: 0;
+        }
+        .thumbnail-wrapper {
+            display: block;
+            height: 0;
+            background-position: 50%;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+            padding-bottom: 66.5%;
+            img {
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100%;
+                color: #a0a0a0;
+                z-index: -1;
+            }
+        }
+    }
+  }

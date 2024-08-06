@@ -1,0 +1,176 @@
+// Header Styling
+.header {
+    border-bottom: solid 1px rgba(0,0,0,0.1);
+    position: sticky;
+    .custom-logo {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    &__default {
+
+        .site-branding {
+
+            a {
+                text-decoration: none;
+            }
+            h1{
+                margin:0px;
+            }
+            p{
+                margin:0px;
+                font-size: 2.5rem;
+                font-weight: 600;
+            }
+        
+            .custom-logo {
+                max-width: 9.375rem;
+            }
+        }
+        .top-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 0.75rem 1.25rem;
+            margin-left: auto;
+            margin-right: auto;
+            @media (min-width: 48rem) {
+                gap: 1.25rem;
+            }
+        }
+
+        .main-navigation {
+
+            @media screen and (min-width: 60rem) {
+                max-width: 60%;
+            }
+        }
+    }
+
+    &__center {
+
+        .custom-logo {
+            max-width: 18.75rem;
+        }
+
+        .branding-wrapper {
+            text-align: center;
+        }
+
+        .nav-wrapper {
+
+            .main-navigation {
+
+                @media screen and (min-width: 60rem) {
+                    width: 90%;
+                }
+            }
+
+            .search {
+                margin-left: 0;
+
+                &__form-wrapper {
+                    width: 100%;
+                }
+            }
+
+            > * {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    &__full {
+
+        .custom-logo {
+            max-width: 9.375rem;
+        }
+
+        .mobile-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .top-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__top {
+
+        .top-wrapper {
+            border-bottom: solid 1px #eeeeee;
+
+            > * {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .search {
+            margin-left: 0;
+        }
+
+        .custom-logo {
+            max-width: 18.75rem;
+        }
+
+        .branding-wrapper {
+            text-align: center;
+        }
+    }
+
+    &__widget {
+
+        .branding-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .site-branding {
+            max-width: 60%;
+            margin: auto;
+        }
+
+        @media (min-width: 48rem) {
+
+            .branding-wrapper {
+                flex-direction: row;
+            }
+
+            .site-branding {
+                max-width: 35%;
+            }
+
+            .header-widget-wrapper {
+                max-width: 60%;
+            }
+
+            .main-navigation {
+                max-width: 75%;
+            }
+        }
+        
+        .nav-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .search__form-wrapper {
+            width: 100%;
+        }
+    }
+}
